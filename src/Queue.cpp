@@ -10,16 +10,6 @@ Queue::Queue()
 	, mSize(0)
 	, mCards()
 {
-
-	/*
-	for (int x = 0; x < 4; x++)
-	{
-		for (int y = 2; y < 14; y++)
-		{
-			mCards[(x * 13) + (y - 2)] = new Card(x, y);
-		}
-	}
-	*/
 }
 
 Queue::~Queue()

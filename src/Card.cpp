@@ -38,12 +38,14 @@ const char* ValueToString(unsigned int value)
 	case 9:
 		return "9";
 	case 10:
-		return "Jack";
+		return "10";
 	case 11:
-		return "Queen";
+		return "Jack";
 	case 12:
-		return "King";
+		return "Queen";
 	case 13:
+		return "King";
+	case 14:
 		return "Ace";
 	default:
 		return "";
