@@ -16,12 +16,14 @@ public:
 	Queue();
 	~Queue();
 
-	void insert(Card* card);
-	Card* remove();
+	void insert(Card card);
+	Card remove();
 	unsigned int getSize();
 
+protected:
+	Card mCards[52];
+
 private:
-	Card** mCards;
 	unsigned int mFrontIndex, mBackIndex, mSize;
 };
 

@@ -13,7 +13,7 @@ const char* SuitToString(unsigned int suit)
 	case 3:
 		return "Clubs";
 	default:
-		return "Error";
+		return "";
 	}
 }
 
@@ -46,8 +46,15 @@ const char* ValueToString(unsigned int value)
 	case 13:
 		return "Ace";
 	default:
-		return "Error";
+		return "";
 	}
+}
+
+Card::Card()
+	: mSuit(0)
+	, mValue(0)
+{
+
 }
 
 Card::Card(unsigned int suit, unsigned int value)

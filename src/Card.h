@@ -28,6 +28,7 @@
 class Card
 {
 public:
+	Card();
 	Card(unsigned int suit, unsigned int value);
 	~Card();
 

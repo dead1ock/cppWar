@@ -7,28 +7,22 @@
 
 #include "Card.h"
 #include "Queue.h"
+#include "Deck.h"
 
 using namespace std;
 
 void main(void)
 {
-	Card card(0, 2);
-	Card card2(0, 13);
+	Deck deck;
+	Queue p1;
+	Queue p2;
 
-	cout << (card >= card2) << '\n';
-	cout << (card == card2) << '\n';
-	cout << card << '\n';
-	cout << card2 << '\n';
+	p1.insert(deck.remove());
+	p2.insert(deck.remove());
 
-	Queue cardQueue;
-
-	cout << cardQueue.remove() << '\n';
-	cardQueue.insert(&card);
-	cardQueue.insert(&card2);
-	cout << cardQueue.getSize() << '\n';
-	cout << *cardQueue.remove() << '\n';
-	cout << *cardQueue.remove() << '\n';
-	cout << cardQueue.getSize() << '\n';
+	cout << deck.getSize() << '\n';
+	cout << p1.getSize() << '\n';
+	cout << p2.getSize() << '\n';
 
 	system("pause");
 	return;

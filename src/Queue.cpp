@@ -8,8 +8,8 @@ Queue::Queue()
 	: mFrontIndex(0)
 	, mBackIndex(0)
 	, mSize(0)
+	, mCards()
 {
-	mCards = new Card*[52];
 
 	/*
 	for (int x = 0; x < 4; x++)
@@ -24,10 +24,9 @@ Queue::Queue()
 
 Queue::~Queue()
 {
-	delete[] mCards;
 }
 
-void Queue::insert(Card* card)
+void Queue::insert(Card card)
 {
 	mCards[mFrontIndex++] = card;
 
@@ -37,9 +36,9 @@ void Queue::insert(Card* card)
 	mSize++;
 }
 
-Card* Queue::remove()
+Card Queue::remove()
 {
-	Card* ret = 0;
+	Card ret;
 	
 	if (mSize > 0)
 	{
